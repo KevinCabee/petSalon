@@ -1,0 +1,53 @@
+#pets{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.pet{
+    background-color: #dedede;
+    margin: 10px;
+    padding: 10px;
+}
+
+.info-bar{
+    background-color: black;
+    color: white;
+    margin: 5px;
+    margin-top: 30px;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+#pet-type{
+    background-color: black;
+    color: white;
+    margin: 5px;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.form-container{
+    background-color: rgb(255, 217, 0);
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-justify: left;
+    margin: auto;
+    padding: 20px;
+}
+
+#table{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+#table th{
+    flex: 1;
+    background-color: rgb(255, 217, 0);
+}
+
+#table td{
+    background-color: #dedede;
+}

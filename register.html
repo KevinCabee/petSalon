@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/display.css">
 
     <title>Register</title>
 </head>
@@ -26,44 +27,81 @@
             </nav>
         </div>
     </header>
-    <main>
-        <h2>Salon Information</h2>
-        <div id="salon-info"></div>
-
-        <h2>Register a new pet</h2>
-        <form id="petForm">
-          
+    <main class="container">
+        <div class="form-container">
+            <h2>Register a new pet</h2>
+            <div>
                 <label> Name:</label>
-                <input type="text" id="Name"><br>
-         
+                <input type="text" id="txtName">
+            </div>
+            <div>
                 <label> Age:</label>
-                <input type="number" id="Age"><br>
-           
+                <input type="number" id="txtAge">
+            </div>
+            <div>
                 <label> Gender:</label>
-                <input type="text" id="Gender"><br>
-            
-                <label> Breed:</label>
-                <input type="text" id="Breed"><br>
-          
+                <input type="text" id="txtGender">
+            </div>
+            <div>
                 <label> Service:</label>
-                <input type="text" id="Service"><br>
-           
-                <label>Type: </label>
-                <select id="type">
-                    <option value="Dog">Dog</option>
-                    <option value="Cat">Cat</option>
-                    <option value="Bird">Bird</option>
-                </select><br>
-            </form>
-            
+                <select id="txtService">
+                    <option value="grooming">Grooming</option>
+                    <option value="vaccines">Vaccines</option>
+                    <option value="nails">Nails Trimming</option>
+                </select>
+            </div>
+            <div>
+                <label> Type: </label>
+                <select id="txtType">
+                    <option value="bird">Bird</option>
+                    <option value="dog">Dog</option>
+                    <option value="racoon">Racoon</option>
+                    <option value="girafe">Girafe</option>
+                </select>
+            </div>
             <button onclick="register()">Register</button>
+        </div>
+        </div>
+        <div class="info-bar">
+            <label>Grooming: <span id="totalGroomings"> 0 </span></label>
+            <label>Vaccines: <span id="totalVaccines"> 0 </span></label>
+            <label>Nails: <span id="totalNails"> 0 </span></label>
+        </div>
+        <div class="pet-type" id="pet-type">
+            <h3>Type of Pet (Pet Count)</h3>
+            <label>Dog:<span id="totalDogs"> 0 </span></label>
+            <label>Girafe:<span id="totalGirafes"> 0 </span></label>
+            <label>Bird:<span id="totalBirds"> 0 </span></label>
+            <label>Racoon:<span id="totalRacoons"> 0 </span></label>
+        </div>
+        <div id="pets">
+        </div>
 
-        <div id="petList"></div>
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Service</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody id="petRows">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
 
     </main>
 
 
     <script src="./scripts/register.js"></script>
+    <script src="./scripts/display.js"></script>
 </body>
 
 </html>

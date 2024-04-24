@@ -5,53 +5,64 @@ let petSalon = {
     address: "123 Main Street, San Diego, CA 92108",
     pets: []
 }
-// display Salon object literal on the HTML.
-
-const salonInfo = document.getElementById("salon-info");
-salonInfo.innerHTML = `
- <h3>Welcome to ${petSalon.name}<h/3>
- <p>Location: ${petSalon.address}</p>
- <p>Phone: ${petSalon.phone}</p>
- `;
 
 
-//create a pet constructor.
-
-function Pet(name, age, gender, breed, service, type) {
+// constructor (blueprint)
+function Pet(name, age, gender, service, type) {
+    //attributes=parameters;
     this.name = name;
     this.age = age;
     this.gender = gender;
-    this.breed = breed;
     this.service = service;
     this.type = type;
 }
 
-function register() {
-    let inputName = document.getElementById("Name").value;
-    let inputAge = document.getElementById("Age").value;
-    let inputGender = document.getElementById("Gender").value;
-    let inputBreed = document.getElementById("Breed").value;
-    let inputService = document.getElementById("Service").value;
+function isValid(pet){
+    let validation=true;// we are fine
 
-    let newPet = new Pet(inputName, inputAge, inputGender, inputBreed, inputService);
+    if(pet.name==""){
+        validation=false;
+        alert("Please enter a name");
+    }
 
-    // Display the pet details on the HTML page
-
-    let petDetails = document.createElement('div');
-    petDetails.innerHTML = `
-    <p>${newPet.name}'s Info</p>
-    <p>Age: ${newPet.age}</p>
-    <p>Gender: ${newPet.gender}</p>
-    <p>Breed: ${newPet.breed}</p>
-    <p>Service: ${newPet.service}</p>
-`;
-    let petList = document.getElementById("petList");
-    petList.appendChild(petDetails);
-
-    // clear form
-    document.getElementById("petForm").reset();
+    if(pet.service==""){
+        validation=false;
+        alert("Please enter a service");
+    }
+    return validation; //returning the result oif the validation
 }
 
+
+function register() {
+    let inputName = document.getElementById("txtName").value;
+    let inputAge = document.getElementById("txtAge").value;
+    let inputGender = document.getElementById("txtGender").value;
+    let inputService = document.getElementById("txtService").value;
+    let inputType = document.getElementById("txtType").value;
+
+    let newPet = new Pet(inputName, inputAge, inputGender, inputService, inputType);
+
+    if(isValid(newPet)==true){
+        petSalon.pets.push(newPet);
+        displayRow();
+        displayServiceCount();
+        displayTypeCount();
+        console.log(petSalon.pets); //displaying the pets array
+    }
+}
+
+function init(){
+    let pet1 = new Pet("Scooby", 99, "Male", "Grooming","Dog");
+    let pet2 = new Pet("Scrappy", 79, "Male", "Vaccines","Bird");
+    petSalon.pets.push(pet1,pet2);
+
+    displayRow();
+    displayServiceCount();
+    displayTypeCount();
+    
+}
+
+window.onload=init;// wait to render the HTML the loiad the init
 
 
 
