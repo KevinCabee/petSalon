@@ -24,7 +24,6 @@ function isValid(pet){
         validation=false;
         alert("Please enter a name");
     }
-
     if(pet.service==""){
         validation=false;
         alert("Please enter a service");
@@ -49,6 +48,10 @@ function register() {
         displayTypeCount();
         console.log(petSalon.pets); //displaying the pets array
     }
+}
+
+function deletePet(){
+    console.log("Deleting pet..." );
 }
 
 function init(){

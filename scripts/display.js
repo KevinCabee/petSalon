@@ -21,26 +21,29 @@ function displayCard() {
 }
 
 function displayRow() {
-    const tableRow = document.getElementById("petRows");
+    const TABLE = document.getElementById("petRows");
 
-    let row = "";
+    let tr = "";
     
     for (let i = 0; i < petSalon.pets.length; i++) {
         let pet = petSalon.pets[i];
-        row+=`
-            <tr>
+        tr+=`
+            <tr id="${i}">
                 <td>${pet.name}</td>
                 <td>${pet.age}</td>
                 <td>${pet.gender}</td>
                 <td>${pet.service}</td>
                 <td>${pet.type}</td>
+                <td>
+                    <button class="delete-btn" onclick="deletePet(${i});"><i class="fa-solid fa-trash"></i></button>
+                </td>
             </tr>
             `
     }
     //HTML template for the cards
 
     //insert the card into the HTML div
-    tableRow.innerHTML = row;
+    TABLE.innerHTML = tr;
 }
 
 function displayTypeCount() {

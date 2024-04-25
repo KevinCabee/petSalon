@@ -26,28 +26,61 @@
     padding: 3px;
 }
 
-.form-container{
+.input-form-container{
     background-color: rgb(255, 217, 0);
-    width: 40%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-justify: left;
-    margin: auto;
+    margin-bottom: 10px;
     padding: 20px;
 }
 
-#table{
+.input-form-container label{
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.input-form-container input{
+   
+}
+
+.fa-virus{
+    color: green;
+}
+
+.fa-trash{
+    color: rgb(150, 150, 150);
+    font-size: 12px;
+    border: 1px solid rgb(150, 150, 150);
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.fa-bath{
+    color: aqua;
+}
+
+.fa-scissors{
+    color: blueviolet;
+}
+
+.delete-btn{
+    border: none;
+}
+
+/* #table{
     width: 100%;
     text-align: center;
     border-collapse: collapse;
-}
+} */
 
-#table th{
+/* #table th{
     flex: 1;
     background-color: rgb(255, 217, 0);
 }
 
 #table td{
     background-color: #dedede;
-}
+} */
