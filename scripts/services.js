@@ -33,14 +33,18 @@ function register() {
     if (isValid(newService) == true) {
         services.service.push(newService);
         showNotification("Successfully registered", "success");
+        save(newService);//it is coming from StoreManager
+        $("input").val("");// clears all the inputs
     }
-    clearForm();
-}
+    
+        // clearForm();
+    }
 
-function clearForm(){
-    document.getElementById("txtService").value="";
-    document.getElementById("txtPrice").value="";
-}
+
+// function clearForm(){
+//     document.getElementById("txtService").value="";
+//     document.getElementById("txtPrice").value="";
+// }
 //use notification
 
 //clear the form
