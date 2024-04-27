@@ -57,21 +57,22 @@ function displayTypeCount() {
         
         if(pet.type.toLowerCase() == "bird") {
             bird++;
-            document.getElementById("totalBirds").innerHTML = bird;
         }
         if(pet.type.toLowerCase() == "girafe") {
             girafe++;
-            document.getElementById("totalGirafes").innerHTML = girafe;
         }
         if(pet.type.toLowerCase() == "dog") {
             dog++;
-            document.getElementById("totalDogs").innerHTML = dog;
         }
         if(pet.type.toLowerCase() == "racoon") {
             racoon++;
-            document.getElementById("totalRacoons").innerHTML = racoon;
         }
+        
     }
+    document.getElementById("totalBirds").innerHTML = bird;
+    document.getElementById("totalGirafes").innerHTML = girafe;
+    document.getElementById("totalDogs").innerHTML = dog;
+    document.getElementById("totalRacoons").innerHTML = racoon;
 }
 
 function displayServiceCount() {
@@ -85,18 +86,19 @@ function displayServiceCount() {
         let pet = petSalon.pets[i];
         if (pet.service.toLowerCase() == "grooming") {
             grooming++;
-            document.getElementById("totalGroomings").innerHTML = grooming;
         }
         if (pet.service.toLowerCase() == "vaccines") {
             vaccines++;
-            document.getElementById("totalVaccines").innerHTML = vaccines;
         }
         if (pet.service.toLowerCase() == "nails") {
             nails++;
-            document.getElementById("totalNails").innerHTML = vaccines;
         }
+        
     }
-
+    document.getElementById("totalGroomings").innerHTML = grooming;
+    document.getElementById("totalVaccines").innerHTML = vaccines;
+    document.getElementById("totalNails").innerHTML = nails;
+    
     // if statments
 
     //increase the number of the grooming 

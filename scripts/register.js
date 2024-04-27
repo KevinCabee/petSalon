@@ -22,11 +22,13 @@ function isValid(pet){
 
     if(pet.name==""){
         validation=false;
-        alert("Please enter a name");
+        // alert("Please enter a name");
+        showNotification("Please add a name","error");
     }
     if(pet.service==""){
         validation=false;
-        alert("Please enter a service");
+        // alert("Please enter a service");
+        showNotification("Please add service","error");
     }
     return validation; //returning the result oif the validation
 }
@@ -46,24 +48,35 @@ function register() {
         displayRow();
         displayServiceCount();
         displayTypeCount();
+        showNotification("successfully registered","success");
         console.log(petSalon.pets); //displaying the pets array
     }
 }
 
-function deletePet(){
-    console.log("Deleting pet..." );
+function deletePet(x){
+        console.log("Deleting pet..." + x );
+        document.getElementById(x).remove();
+        petSalon.pets.splice(x, 1);
+        displayRow();
+        displayServiceCount();
+        displayTypeCount();
+        showNotification("Pet has been deleted","error");
+
 }
 
 function init(){
-    let pet1 = new Pet("Scooby", 99, "Male", "Grooming","Dog");
-    let pet2 = new Pet("Scrappy", 79, "Male", "Vaccines","Bird");
-    petSalon.pets.push(pet1,pet2);
+    let pet1 = new Pet("Scooby", 99, "Female", "Grooming","Dog");
+    let pet2 = new Pet("Scrappy", 79, "Male", "Vaccines","Racoon");
+    let pet3 = new Pet("Tweety", 99, "Female", "Grooming","Girafe");
+    let pet4 = new Pet("Tony", 79, "Male", "Nail","Racoon");
+    petSalon.pets.push(pet1,pet2,pet3,pet4);
 
     displayRow();
-    displayServiceCount();
     displayTypeCount();
-    
+    displayServiceCount();    
 }
+
+
 
 window.onload=init;// wait to render the HTML the loiad the init
 
