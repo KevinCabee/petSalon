@@ -45,6 +45,11 @@ function isValid(pet){
         // alert("Please enter a name");
         showNotification("Please select pet type","error");
     }
+    if(pet.action==""){
+        validation=false;
+        // alert("Please choose a payment option");
+        showNotification("Please select pet type","error");
+    }
     return validation; //returning the result oif the validation
 }
 
@@ -55,8 +60,9 @@ function register() {
     let inputGender = document.getElementById("txtGender").value;
     let inputService = document.getElementById("txtService").value;
     let inputType = document.getElementById("txtType").value;
+    let inputAction = document.getElementById("txtAction").value;
 
-    let newPet = new Pet(inputName, inputAge, inputGender, inputService, inputType);
+    let newPet = new Pet(inputName, inputAge, inputGender, inputService, inputType, inputAction);
 
     if(isValid(newPet)==true){
         petSalon.pets.push(newPet);
