@@ -25,10 +25,25 @@ function isValid(pet){
         // alert("Please enter a name");
         showNotification("Please add a name","error");
     }
+    if(pet.age==""){
+        validation=false;
+        // alert("Please enter a name");
+        showNotification("Please add age","error");
+    }
+    if(pet.gender==""){
+        validation=false;
+        // alert("Please enter a name");
+        showNotification("Please add gender","error");
+    }
     if(pet.service==""){
         validation=false;
         // alert("Please enter a service");
         showNotification("Please add service","error");
+    }
+    if(pet.type==""){
+        validation=false;
+        // alert("Please enter a name");
+        showNotification("Please select pet type","error");
     }
     return validation; //returning the result oif the validation
 }
@@ -53,16 +68,24 @@ function register() {
     }
 }
 
-function deletePet(x){
-        console.log("Deleting pet..." + x );
-        document.getElementById(x).remove();
-        petSalon.pets.splice(x, 1);
-        displayRow();
-        displayServiceCount();
-        displayTypeCount();
-        showNotification("Pet has been deleted","error");
 
+function deletePet(x){
+    console.log("Deleting pet..." + x );
+    document.getElementById(x).remove();
+    petSalon.pets.splice(x, 1);
+    displayRow();
+    displayServiceCount();
+    displayTypeCount();
+    showNotification("Pet has been deleted","error");
 }
+
+// function clearForm(){
+//     document.getElementById("txtName").value="";
+//     document.getElementById("txtAge").value="";
+//     document.getElementById("txtGender").value="";
+//     document.getElementById("txtService").value="";
+//     document.getElementById("txtType").value="";
+// }
 
 function init(){
     let pet1 = new Pet("Scooby", 99, "Female", "Grooming","Dog");

@@ -1,0 +1,152 @@
+/* styles.css */
+
+/* Global Styles */
+body {
+    font-family: 'Titillium Web', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: tan;
+    color: #333;
+}
+
+
+
+/* Header Styles */
+.site-header {
+    background-image: url(/img/header.jpeg);
+    background-size: cover;
+    background-position: center;
+    color: hsl(0, 0%, 100%);
+    height: auto;
+}
+
+.site-header-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10px;
+    height: 350px;
+    align-items: center;
+}
+
+
+.site-header a {
+    text-decoration: none;
+    color: #ffffffce;
+    cursor: pointer;
+}
+
+.brand-logo {
+    font-size: 150px;
+}
+
+.brand-name h1 {
+    font-size: 50px;
+    font-weight: 900;
+    font-family: stencil std;
+}
+
+.brand-quote {
+    font-family: chalkduster, fantasy;
+    font-size: 35px;
+}
+
+.contact-nav {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-nav p {
+    font-size: 30px;
+}
+
+.nav-bar-container {
+
+    width: 80%;
+    background-color: black;
+    margin: auto;
+    justify-content: center;
+    border-radius: 150px;
+    height: 30px;
+}
+
+
+
+.nav-bar a {
+    margin: 0px 100px;
+}
+
+.social-media-icon a {
+    font-size: 22px;
+    margin: 5px;
+    color: #ffffffce;
+}
+
+/* Main Content Styles */
+
+.main-container {
+    /* display: flex; */
+    justify-content: center;
+    padding: 40px;
+    width: 100%;
+    margin: auto;
+    background-color: tan;
+}
+
+.info-content-container {
+    display: flex;
+}
+
+.info-main {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: left;
+    align-items: center;
+    justify-items: space-around;
+}
+
+.info{
+    width: 70%;
+}
+
+.info p {
+    font-weight: lighter;
+}
+
+.info-content-container img{
+    width: auto;
+    height: 400px;
+}
+
+.info{
+    font-weight: bold;
+}
+
+.safety{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.safety h2{
+    margin-top: 50px;
+    border: dashed 3px rgb(174, 21, 21);
+    padding: 5px;
+
+}
+
+.ul{
+    
+}
+/* Footer */
+.footer-container {
+    width: 100% !important;
+    background-color: #333 !important;
+    color: #ffffffce !important;
+    margin: auto !important;
+    text-align: center !important;
+    padding: 20px;
+}

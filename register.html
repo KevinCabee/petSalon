@@ -11,7 +11,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/register.css">
     <link rel="stylesheet" href="styles/display.css">
 
     <script src="https://kit.fontawesome.com/337be747ec.js" crossorigin="anonymous"></script>
@@ -22,18 +22,34 @@
 <body>
     <header class="site-header">
         <div class="site-header-container">
-            <h1><a href="index.html" class="home-btn-1 home-btn-2">Pet Salon</a></h1>
-            <nav>
-                <a class="nav-1 nav-2" href="index.html">Home</a>
-                <a class="nav-1 nav-2" href="register.html">Register Pet</a>
+            <div class="brand-name">
+                <p class="brand-logo"><i class="fa-solid fa-shield-dog"></i></p>
+                <h1>Dirty Paws Grooming Salon</h1>
+                <p class="brand-quote">It's PAW-king Amazing!</p>
+            </div>
+            <div class="contact-nav">
+                <p><i class="fa-solid fa-phone-flip"></i> (858) 123-4567</p>
+                <div class="social-media-icon">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-yelp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="nav-bar-container">
+            <nav class="nav-bar">
+                <a href="index.html">Home</a>
+                <a class="current-tab" href="register.html">Register</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
             </nav>
         </div>
     </header>
     <div id="notification" class="notification">
-        <span id="closeNotification" >&#9747</span>
+        <span id="closeNotification">&#9747</span>
         <p id="notificationText">This is going to be dynamic text!</p>
     </div>
-    <main class="container">
+    <main class="service-main-container container">
         <div class="input-form-container">
             <h2>Register a new pet</h2>
             <div>
@@ -95,11 +111,27 @@
                 </tr>
             </thead>
             <tbody id="petRows">
-               
+
             </tbody>
         </table>
-
     </main>
+    <footer>
+        <div class="footer-container">
+            <div>
+                <p><i class="fa-solid fa-phone-flip"></i> (858) 123-4567</p>
+            </div>
+            <div>
+                <p>HOURS:</p>
+                <p>Monday - Saturday</p>
+                <p>8:00am - 4:30pm</p>
+                <div class="social-media-icon">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-yelp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="plugins/jquery3.7.1.js"></script>
     <script src="./scripts/register.js"></script>

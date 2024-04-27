@@ -8,13 +8,13 @@ body{
 img{
     max-width: 100%;
 }
-a{text-decoration: none;
+a{
+    text-decoration: none;
 }
 
 /* utilities */
 .container{
     width: 80%;
-    margin: 0 auto;
 }
 
 .notification{
@@ -45,4 +45,10 @@ a{text-decoration: none;
 
 .error{
     background-color: red;
+}
+
+.current-tab {
+    background-color: green;
+    padding: 10px;
+    
 }

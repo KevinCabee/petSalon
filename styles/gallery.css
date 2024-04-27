@@ -1,0 +1,126 @@
+/* styles.css */
+
+/* Global Styles */
+body {
+    font-family: 'Titillium Web', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+}
+
+/* Header Styles */
+.site-header {
+    background-image: url(/img/banner.jpeg);
+    background-size: 100%;
+    background-position: top;
+    color: hsl(0, 0%, 100%);
+    height: auto;
+
+}
+
+.site-header-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10px;
+    height: 350px;
+    align-items: center;
+}
+
+
+.site-header a {
+    text-decoration: none;
+    color: #ffffffce;
+    cursor: pointer;
+}
+
+.brand-logo {
+    font-size: 150px;
+}
+
+.brand-name h1 {
+    font-size: 50px;
+    font-weight: 900;
+    font-family: stencil std;
+}
+
+.brand-quote {
+    font-family: chalkduster, fantasy;
+    font-size: 35px;
+}
+
+.contact-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-nav p {
+    font-size: 30px;
+}
+
+.nav-bar-container {
+    width: 80%;
+    background-color: black;
+    margin: auto;
+    border-radius: 150px;
+    height: 30px;
+    align-items: center;
+}
+.nav-bar a {
+    margin: 0px 100px;
+}
+
+
+.social-media-icon a {
+    font-size: 22px;
+    margin: 5px;
+    color: #ffffffce;
+}
+
+/* Main Content Styles */
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    width: 100%;
+    margin: auto;
+    background-color: tan;
+}
+
+.gallery-img {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 3px;
+    grid-row-gap: 3px;
+    width: 80%;
+    margin: 10px auto;
+}
+
+.gallery-img img {
+    height: 450px;
+    width: 400px;
+}
+
+.pics{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 15px;
+}
+
+
+
+/* Footer */
+.footer-container {
+    width: 100%;
+    background-color: #333;
+    color: #ffffffce;
+    margin: auto;
+    text-align: center;
+}

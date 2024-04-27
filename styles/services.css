@@ -1,0 +1,150 @@
+/* styles.css */
+
+/* Global Styles */
+body {
+    font-family: 'Titillium Web', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+
+
+/* Header Styles */
+.site-header {
+    position: relative;
+    background-image: url(/videos/AdobeStock_286388236_Video_HD_Preview.mp4);
+    background-size: cover;
+    background-position: center;
+    color: hsl(0, 0%, 100%);
+    z-index: 1;
+    height: 500px;
+}
+
+.site-header-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10px;
+    height: 470px;
+    align-items: center;
+}
+
+
+.site-header a {
+    text-decoration: none;
+    color: #ffffffce;
+    cursor: pointer;
+}
+
+.brand-logo {
+    font-size: 150px;
+    color: #ffffff;
+}
+
+.brand-name h1 {
+    font-size: 50px;
+    font-weight: 900;
+    font-family: stencil std;
+    color: rgb(255, 255, 255);
+}
+.brand-name{
+    color: #ffffff;
+    
+}
+
+.brand-quote {
+    font-family: chalkduster, fantasy;
+    font-size: 35px;
+    color: rgb(221, 0, 255);
+}
+
+.contact-nav {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-nav p {
+    font-size: 30px;
+}
+
+.nav-bar-container {
+    
+    width: 80%;
+    background-color: black;
+    margin: auto;
+    justify-content: center;
+    align-items:baseline;
+    border-radius: 150px;
+    height: 30px;
+    
+}
+
+
+
+.nav-bar a {
+    margin: 0px 100px;
+}
+
+.social-media-icon a {
+    font-size: 22px;
+    margin: 5px;
+    color: #ffffffce;
+}
+
+/* Main Content Styles */
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    width: 100%;
+    margin: auto;
+    background-color: tan;
+}
+
+.info-main {
+    width: 30%;
+    margin: 0px 40px;
+}
+
+.service-main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+
+}
+
+/* Footer */
+.footer-container {
+    width: 100% !important;
+    background-color: #333 !important;
+    color: #ffffffce !important;
+    margin: auto !important;
+    text-align: center !important;
+    padding: 20px;
+}
