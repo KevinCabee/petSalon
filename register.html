@@ -67,9 +67,6 @@
             <div>
                 <label> Service:</label>
                 <select id="txtService">
-                    <option value="grooming">Grooming</option>
-                    <option value="vaccines">Vaccines</option>
-                    <option value="nails">Nails Trimming</option>
                 </select>
             </div>
             <div>
@@ -95,6 +92,8 @@
             <label><i class="fa-solid fa-bath"></i>: <span id="totalGroomings"> 0 </span></label>
             <label><i class="fa-solid fa-virus"></i>: <span id="totalVaccines"> 0 </span></label>
             <label><i class="fa-solid fa-scissors"></i>: <span id="totalNails"> 0 </span></label>
+            <label><i class="fa-solid fa-hotel"></i><span id="totalHotel"> 0 </span></label>
+            <label>💸<span id="profits">0</span></label>
         </div>
         <div class="pet-type" id="pet-type">
             <h3>Type of Pet (Pet Count)</h3>
@@ -113,8 +112,10 @@
                     <th>Age</th>
                     <th>Gender</th>
                     <th>Service</th>
+                    <th>Price</th>
                     <th>Type</th>
                     <th>Action</th>
+                    
                 </tr>
             </thead>
             <tbody id="petRows">
@@ -142,6 +143,7 @@
 
     <script src="plugins/jquery3.7.1.js"></script>
     <script src="./scripts/register.js"></script>
+    <script src="scripts/storeManager.js"></script>
     <script src="./scripts/display.js"></script>
     <script src="./scripts/notification.js"></script>
 </body>

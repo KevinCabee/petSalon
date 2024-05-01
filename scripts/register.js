@@ -6,15 +6,16 @@ let petSalon = {
     pets: []
 }
 
-
 // constructor (blueprint)
-function Pet(name, age, gender, service, type) {
+function Pet(name, age, gender, service, type, action) {
     //attributes=parameters;
     this.name = name;
     this.age = age;
     this.gender = gender;
     this.service = service;
     this.type = type;
+    this.action = action;
+    this.price=getServicesPrice(service);
 }
 
 function isValid(pet){
@@ -85,23 +86,44 @@ function deletePet(x){
     showNotification("Pet has been deleted","error");
 }
 
-// function clearForm(){
-//     document.getElementById("txtName").value="";
-//     document.getElementById("txtAge").value="";
-//     document.getElementById("txtGender").value="";
-//     document.getElementById("txtService").value="";
-//     document.getElementById("txtType").value="";
-// }
+function getServices() {
+    // read the localSStorage to get the services
+    let serviceList = readItems();
+    let option="";
+    //travel the array of the services
+    for(let i=0;i<serviceList.length;i++){
+        //create the HTML <option> </option> element
+        option=`<option value="${serviceList[i].service}"> ${serviceList[i].service} </option>`;
+        $("#txtService").append(option);//JQuery Option
+        //document.getElementById("txtServices").innerHTML=option;
+    }
+}
+
+function getServicesPrice(serviceName){
+    //read the LS
+    let serviceList = readItems();
+    let price=0;
+    //travel the array
+    for(let i=0;i<serviceList.length;i++){
+        let service = serviceList[i];
+        if(serviceName.toLowerCase() == service.service.toLowerCase()){
+            price=service.price;
+        }
+    }                                           
+    return Number(price);
+}
+
 
 function init(){
-    let pet1 = new Pet("Scooby", 99, "Female", "Grooming","Dog");
-    let pet2 = new Pet("Scrappy", 79, "Male", "Vaccines","Racoon");
-    let pet3 = new Pet("Tweety", 99, "Female", "Grooming","Girafe");
-    let pet4 = new Pet("Tony", 79, "Male", "Nail","Racoon");
+    let pet1 = new Pet("Scooby", 99, "Female", "Grooming","Dog", "Credit");
+    let pet2 = new Pet("Scrappy", 79, "Male", "Vaccines","Racoon", "Debit");
+    let pet3 = new Pet("Tweety", 99, "Female", "Hotel","Girafe", "Credit");
+    let pet4 = new Pet("Tony", 79, "Male", "Nails trimming","Racoon","Debit");
     petSalon.pets.push(pet1,pet2,pet3,pet4);
 
     displayRow();
     displayTypeCount();
+    getServices();
     displayServiceCount();    
 }
 

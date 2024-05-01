@@ -33,7 +33,9 @@ function displayRow() {
                 <td>${pet.age}</td>
                 <td>${pet.gender}</td>
                 <td>${pet.service}</td>
+                <td>${pet.price}</td>
                 <td>${pet.type}</td>
+                <td>${pet.action}</td>
                 <td>
                     <button class="delete-btn" onclick="deletePet(${i});"><i class="fa-solid fa-trash"></i></button>
                 </td>
@@ -80,28 +82,32 @@ function displayServiceCount() {
     let grooming = 0;
     let vaccines = 0;
     let nails = 0;
+    let hotel = 0;
+    let profits=0;
     //travel the array
     for (let i = 0; i < petSalon.pets.length; i++) {
         //getthe current pet
         let pet = petSalon.pets[i];
+
+        profits = profits + pet.price;
+
         if (pet.service.toLowerCase() == "grooming") {
             grooming++;
         }
         if (pet.service.toLowerCase() == "vaccines") {
             vaccines++;
         }
-        if (pet.service.toLowerCase() == "nails") {
+        if (pet.service.toLowerCase() == "nails trimming") {
             nails++;
         }
-        
+        if (pet.service.toLowerCase() == "hotel") {
+            hotel++;
+        }
     }
     document.getElementById("totalGroomings").innerHTML = grooming;
     document.getElementById("totalVaccines").innerHTML = vaccines;
     document.getElementById("totalNails").innerHTML = nails;
+    document.getElementById("totalHotel").innerHTML = hotel;
+    document.getElementById("profits").innerHTML = profits;
     
-    // if statments
-
-    //increase the number of the grooming 
-    //increase the number of nails
-    //increase the number of vaccines
 }
